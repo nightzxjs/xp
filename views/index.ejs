@@ -1,0 +1,15 @@
+<%- include('header') -%>
+    <div id="app">
+        <div class="container col-md-8 mt-4">
+            <% allPost.reverse().forEach((post, index) => { %> 
+            <div class="post mt-x">
+                <a href="/<%= post.username %>/<%= post.title %>" class="title"><%= index + 1 %>. <%= post.title.split("-").join(" ") %></a>
+                <div class="d-flex">
+                    <a href="/<%= post.username %>" class="author"><%= post.username %></a>
+                    <p class="date ms-2"><%= timeSince(new Date(post.date)) %></p>
+                </div>
+            </div>
+            <% }) %> 
+        </div>
+    </div>
+<%- include('footer') -%>

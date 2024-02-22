@@ -1,0 +1,23 @@
+<%- include('header') -%>
+    <div id="app">
+        <div class="container col-md-6 mt-4">
+            <h1 class="fs-3">Publicar</h1>
+            <form action="/publicar" method="POST">
+                <div class="form-group mt-4">
+                    <input type="hidden" name="username" value="<%= locals.usernameLogged %>">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="title">Título</label>
+                    <input type="text" class="form-control" id="title" name="title">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="content">Conteúdo</label>
+                    <textarea name="content" id="content" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+                <div class="form-group mt-4">
+                    <button type="submit" class="btn btn-success">Publicar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<%- include('footer') -%>

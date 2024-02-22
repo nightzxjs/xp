@@ -1,0 +1,14 @@
+<%- include('header') -%>
+    <div id="app">
+        <div class="container col-md-8">
+            <div class="border rounded mt-4 px-4 py-4">
+                <div class="d-flex">
+                    <a href="/<%= locals.author %>" class="author"><%= locals.author %></a>
+                    <p class="date mx-2"><%= locals.date %></p>
+                </div>
+                <h1 class="fs-3"><%= locals.title %></h1>
+                <p><%= locals.content %></p>
+            </div>
+        </div>
+    </div>
+<%- include('footer') -%>
